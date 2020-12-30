@@ -486,6 +486,7 @@
 .musicControllers .right > i {
   font-size: 20px;
   opacity: .8;
+  cursor: pointer;
 }
 
 .musicControllers .right input[type=range] {

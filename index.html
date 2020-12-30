@@ -186,7 +186,7 @@
         <div class="musicInformations">
           <div class="musicName">
             <span>Nome da música</span>
-            <i class="material-icons">favorite_border</i>
+            <i class="material-icons likeButton" onclick="likeUnlike()">favorite_border</i>
           </div>
 
           <div class="musicAuthor">
@@ -198,7 +198,7 @@
       <div class="middle">
         <div class="controllers">
           <i class="material-icons">skip_previous</i>
-          <i class="material-icons">play_circle_outline</i>
+          <i class="material-icons playButton" onclick="playPause()">play_circle_outline</i>
           <i class="material-icons">skip_next</i>
         </div>
 
@@ -210,10 +210,12 @@
       </div>
 
       <div class="right">
-        <i class="material-icons">volume_up</i>
-        <input type="range">
+        <i class="material-icons volumeControl" onclick="muteUnmute()"> volume_up</i>
+        <input type="range" value="0">
       </div>
     </div>
   </div>
+
+  <script src="./scripts.js"></script>
 </body>
 </html>
