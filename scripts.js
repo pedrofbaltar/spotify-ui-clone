@@ -6,7 +6,7 @@ function likeUnlike() {
   } else {
     likeButton.innerHTML = 'favorite_border';
   };
-};
+}; // Like/Unlike
 
 function playPause() {
   const playButton = document.querySelector('.playButton');
@@ -16,7 +16,7 @@ function playPause() {
   } else {
     playButton.innerHTML = 'play_circle_outline';
   };
-};
+}; // Pause/Play
 
 function muteUnmute() {
   const volumeControl = document.querySelector('.volumeControl');
@@ -26,4 +26,4 @@ function muteUnmute() {
   } else {
     volumeControl.innerHTML = 'volume_up';
   };
-};
+}; // Mute/Unmute
