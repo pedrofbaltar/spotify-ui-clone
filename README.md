@@ -12,6 +12,7 @@
 
 - HTML
 - SCSS
+- JS
 
 ## 🚀 To clone this repository
 
