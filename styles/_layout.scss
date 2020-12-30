@@ -1,0 +1,15 @@
+.container {
+  display: grid;
+
+  grid-template-columns: 224px auto;
+  grid-template-rows: auto 92px;
+
+  grid-template-areas: 
+    'SB MN'
+    'MC MC'
+  ;
+
+  height: 100vh;
+
+  overflow: hidden;
+}

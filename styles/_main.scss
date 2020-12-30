@@ -1,0 +1,166 @@
+.main {
+  background: $dark-gray;
+  grid-area: MN;
+ 
+  padding: 32px;
+
+  max-height: 100vh;
+  overflow: scroll;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .headerMain {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    color: $white;
+
+    .navigation {
+      display: flex;
+      align-items: center;
+
+      > i {
+        opacity: .7;
+        background: $black;
+
+        padding: 8px;
+        border-radius: 50%;
+
+        cursor: pointer;
+
+        & + i {
+          margin-left: 8px;
+        }
+
+        &:hover {
+          opacity: 1;
+        }
+      }
+    }
+
+    .profile {
+      display: flex;
+      align-items: center;
+
+      padding: 8px;
+      background: $light-gray;
+
+      border-radius: 100px;
+
+      max-width: 165px;
+      width: 100%;
+
+      .avatar {
+        width: 24px;
+        height: 24px;
+
+        border-radius: 50%;
+        background: $white;
+
+        flex-shrink: 0;
+      }
+
+      > span {
+        margin-left: 8px;
+
+        font-size: 14px;
+        font-weight: 500;
+
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+      }
+    }
+  }
+
+  .mainContent {
+    display: flex;
+    flex-direction: column;
+
+    margin-top: 56px;
+
+    color: $white;
+
+    > h1 {
+      font-size: 28px;
+    }
+
+
+    .playlistsView {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(203px, auto));
+
+      gap: 16px;
+
+      margin-top: 24px;
+
+      .playlistContainer {
+        display: flex;
+        flex-direction: column;
+
+        padding: 16px;
+        margin-top: 8px;
+        
+        border-radius: 10px;
+        background: $light-gray;
+        
+        width: 203px;
+        height: 263px;
+
+        position: relative;
+
+        &:hover::after {
+          position: absolute;
+          content: url(/assets/play.svg);
+
+          right: 16px;
+          bottom: 16px;
+
+          border-radius: 50%;
+
+          cursor: pointer;
+        }
+  
+        .pic {
+          width: 171px;
+          height: 171px;
+
+          background: $spotify;
+
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+        }
+
+        .informations {
+          margin-top: 16px;
+          width: 171px;
+
+          .name {
+            font-size: 16px;
+            font-weight: 500;
+
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden; 
+          }
+
+          .description {
+            margin-top: 6px;
+
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden; 
+
+            > span {
+              font-size: 14px;
+              font-weight: 500;
+              opacity: .6;
+            }
+          }
+        }
+      }
+    }    
+  }
+}

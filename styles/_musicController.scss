@@ -1,0 +1,194 @@
+.musicControllers {
+  background: $space-gray;
+  grid-area: MC;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  color: white;
+
+  height: 100%;
+
+  padding: 16px 24px;
+
+
+  .left {
+    display: flex;
+    align-items: center;
+
+    .musicPic {
+      width: 48px;
+      height: 48px;
+
+      background: $spotify;
+    }
+
+    .musicInformations {
+      margin-left: 16px;
+
+     .musicName {
+        display: flex;
+        align-items: center;
+
+        > span {
+          font-size: 14px;
+          font-weight: 500;
+
+          cursor: pointer;
+
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+
+        > i {
+          font-size: 18px;
+          margin-left: 12px;
+
+          opacity: .6;
+
+          cursor: pointer;
+
+          &:hover {
+            opacity: 1;
+          }
+        }
+      }
+
+      .musicAuthor {
+        margin-top: 2px;
+        
+        > span {
+          font-size: 12px;
+          font-weight: 400;
+
+          opacity: .7;
+          cursor: pointer;
+
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+
+  .middle {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .controllers {
+      display: flex;
+      align-items: center;
+
+      > i {
+        opacity: .8;
+        cursor: pointer;
+
+        &:hover {
+          opacity: 1;
+        }
+
+        &:nth-child(2) {
+          font-size: 40px;
+          margin: 0 16px;
+        }
+      }
+    }
+
+    .musicDuration {
+      display: flex;
+      align-items: center;
+
+      margin-top: 8px;
+
+      > span {
+        font-size: 12px;
+        opacity: .8;
+      }
+
+      input[type=range]{
+        -webkit-appearance: none;
+  
+        display: flex;
+        align-items: center;
+  
+        background: transparent;
+  
+        margin: 0 8px;
+        width: 496px;
+  
+        &::-webkit-slider-runnable-track {
+          width: 300px;
+          height: 5px;
+  
+          background: #474747;
+          border: none;
+          border-radius: 80px;
+        }
+  
+        &::-webkit-slider-thumb {
+          -webkit-appearance: none;
+          border: none;
+          height: 14px;
+          width: 14px;
+          border-radius: 50%;
+          background: #ddd;
+          margin-top: -4px;
+        }
+  
+        &:focus::-webkit-slider-runnable-track {
+          background: $spotify;
+          border-right: 80px;
+        }
+      }
+    }
+  }
+
+  .right {
+    display: flex;
+    align-items: center;
+
+    > i {
+      font-size: 20px;
+      opacity: .8;
+    }
+
+    input[type=range]{
+      -webkit-appearance: none;
+
+      display: flex;
+      align-items: center;
+
+      background: transparent;
+
+      margin-left: 8px;
+
+      &::-webkit-slider-runnable-track {
+        width: 300px;
+        height: 5px;
+
+        background: #474747;
+        border: none;
+        border-radius: 80px;
+      }
+
+      &::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        border: none;
+        height: 14px;
+        width: 14px;
+        border-radius: 50%;
+        background: #ddd;
+        margin-top: -4px;
+      }
+
+      &:focus::-webkit-slider-runnable-track {
+        background: $spotify;
+        border-right: 80px;
+      }
+    }
+  }
+}
